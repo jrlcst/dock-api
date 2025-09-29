@@ -1,0 +1,30 @@
+quarkus:
+  devservices:
+    enabled: false
+  http:
+    root-path: /api/
+    port: 8081
+  smallrye-health:
+    root-path: /api/health/ready
+  smallrye-openapi:
+    info-title: Dock Account API
+    info-version: 1.0.0
+  swagger-ui:
+    always-include: true
+  log:
+    level: INFO
+  datasource:
+    username: postgres
+    password: postgres
+    db-kind: postgresql
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/dock
+  hibernate-orm:
+    validate-in-dev-mode: false
+    database:
+      default-schema: dock
+  flyway:
+    enabled: true
+    migrate-at-start: true
+    locations: db/migrations
+    schemas: dock

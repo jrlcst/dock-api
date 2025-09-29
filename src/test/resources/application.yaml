@@ -1,0 +1,15 @@
+quarkus:
+  devservices:
+    enabled: true
+    image-name: postgres:17-alpine
+  datasource:
+    db-kind: postgresql
+  flyway:
+    migrate-at-start: true
+    locations: classpath:db/migrations
+    clean-at-start: true
+    clean-disabled: false
+    schemas: dock
+  hibernate-orm:
+    database:
+      default-schema: dock
