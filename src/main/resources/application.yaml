@@ -3,7 +3,7 @@ quarkus:
     enabled: false
   http:
     root-path: /api/
-    port: 8081
+    port: 8080
   smallrye-health:
     root-path: /api/health/ready
   smallrye-openapi:
